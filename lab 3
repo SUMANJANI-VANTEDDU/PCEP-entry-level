@@ -27,3 +27,18 @@ Expected output: Leap year
 Sample input: 1580
 
 Expected output: Not within the Gregorian calendar period
+```
+year = int(input("Enter a year: "))
+if year>=1714:
+    
+    
+if year%4!=0:
+    print("common year")
+    exit()
+elif year%100!=0:
+    print("Leap year")
+    exit()
+elif year%400!=0:
+    print("common year")
+    exit()
+```
