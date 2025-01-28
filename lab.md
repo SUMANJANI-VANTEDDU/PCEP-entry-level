@@ -1,4 +1,4 @@
-###Objectives###
+#Objectives#
 
 using the if-elif-else statement;
 
@@ -11,13 +11,11 @@ if the year number isn't divisible by four, it's a common year;
 otherwise, if the year number isn't divisible by 100, it's a leap year;
 otherwise, if the year number isn't divisible by 400, it's a common year;
 otherwise, it's a leap year.
-Look at the code in the editor - it only reads a year number, and needs to be completed with the instructions implementing the test we've just described.
 
-The code should output one of two possible messages, which are Leap year or Common year, depending on the value entered.
+It would be good to verify if the entered year falls into the Gregorian era, and output a warning otherwise: Not within the Gregorian calendar period. 
+Tip: use the != and % operators.
 
-It would be good to verify if the entered year falls into the Gregorian era, and output a warning otherwise: Not within the Gregorian calendar period. Tip: use the != and % operators.
 
-Test your code using the data we've provided.
 
 
 
@@ -27,10 +25,10 @@ Test your code using the data we've provided.
 
 ```
 year = int(input("Enter a year: "))
-if year>=1714:
-    
-    
-if year%4!=0:
+if year<1582:
+    print("not within the Gregorian calendar")
+    exit()
+elif year%4!=0:
     print("common year")
     exit()
 elif year%100!=0:
@@ -39,4 +37,6 @@ elif year%100!=0:
 elif year%400!=0:
     print("common year")
     exit()
+else:
+    print("Leap year")
 ```
